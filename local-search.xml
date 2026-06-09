@@ -8,7 +8,7 @@
     <link href="/2026/06/03/%E8%BF%99%E6%98%AF%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/2026/06/03/%E8%BF%99%E6%98%AF%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     
-    <content type="html"><![CDATA[<h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><p>![](C:\Users\风林火山\Pictures\Screenshots\屏幕截图 2025-11-22 210042.png)</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="C-学习"><a href="#C-学习" class="headerlink" title="C++学习"></a>C++学习</h1><h4 id="针对C-的学习我将从这几方面来考虑："><a href="#针对C-的学习我将从这几方面来考虑：" class="headerlink" title="针对C++的学习我将从这几方面来考虑："></a>针对C++的学习我将从这几方面来考虑：</h4><p>概念-&gt;原理(轻本质)-&gt;影响-&gt;边界-&gt;实践</p><p>我将从这些方面来理解和记录: </p><ol><li>它是什么？(要求给出一般的范式是怎么样的) </li><li>为什么存在(它的独到之处)？ </li><li>程序员视角是怎么理解的?(比如引用，这是程序员视角: int a &#x3D; 10; int&amp; r &#x3D; a;   -&gt; 改r 直接影响 a) </li><li>编译器视角是怎么理解的?(这是编译器的视角，偷偷在干什么: int* hidden_ptr &#x3D; &a;) </li><li>浅本质是什么？(比如生命周期，一个函数内的未进行修饰的变量int a，return a，它可能会变成一个未知数(危险信号)，危险访问，这就是浅的本质，表象理解) </li><li>本质上解决了什么问题(可以对比传统的)？ </li><li>实际影响是什么？ </li><li>有什么优点？ </li><li>有什么坑？有什么限制？(这是重要的边界意识) </li><li>实际开发中最常见的用法是什么？ </li><li>不这样做会怎么样? 这并不要求回答每一个问题，回答就要避免概念化，要求具体</li></ol>]]></content>
     
     
     

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="refresh" content="1;url=https://wmwwzs.github.io/learning-journey/" />
+<link rel="icon" type="image/svg+xml" href="https://wmwwzs.github.io/learning-journey/favicon.svg" />
+<meta name="description" content="正在前往 风林火山 · 学习成长记录" />
+<title>风林火山 · 正在前往学习成长记录</title>
+<style>
+  :root{
+    --ink:#f8ece0; --muted:#c9a88c; --lava:#f97316; --ember:#fbbf24; --deep:#7f1d1d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:#050302;color:var(--ink);overflow:hidden;
+    font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .scene{position:fixed;inset:0;z-index:0;overflow:hidden}
+  .scene::before{
+    content:"";position:absolute;inset:-20%;
+    background:
+      radial-gradient(45% 45% at 70% 85%, rgba(249,115,22,.55) 0%, rgba(249,115,22,0) 65%),
+      radial-gradient(60% 55% at 65% 100%, rgba(220,38,38,.4) 0%, rgba(220,38,38,0) 70%),
+      radial-gradient(80% 60% at 50% 0%, #0b0503 0%, #050302 70%);
+  }
+  .volcano{
+    position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:140vmin;height:70vmin;
+    background:
+      conic-gradient(from 180deg at 50% 100%, transparent 0deg, transparent 40deg, #0b0604 40deg, #0b0604 320deg, transparent 320deg);
+    clip-path:polygon(50% 0%, 100% 100%, 0% 100%);
+    opacity:.95;
+  }
+  .glow{
+    position:absolute;left:50%;bottom:34vmin;transform:translateX(-50%);
+    width:26vmin;height:26vmin;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,251,235,.95) 0%, rgba(253,186,116,.6) 25%, rgba(249,115,22,.25) 55%, rgba(249,115,22,0) 100%);
+    filter:blur(2px);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{transform:translateX(-50%) scale(1);opacity:.85}50%{transform:translateX(-50%) scale(1.18);opacity:1}}
+  .ember{
+    position:absolute;bottom:32vmin;width:4px;height:4px;border-radius:50%;
+    background:#fbbf24;box-shadow:0 0 10px #f97316;
+    opacity:0;
+  }
+  .ember:nth-child(1){left:46%;animation:rise 3.2s linear infinite}
+  .ember:nth-child(2){left:50%;animation:rise 4.1s .6s linear infinite}
+  .ember:nth-child(3){left:54%;animation:rise 3.6s 1.2s linear infinite}
+  .ember:nth-child(4){left:48%;animation:rise 4.6s 1.8s linear infinite}
+  .ember:nth-child(5){left:52%;animation:rise 3.9s 2.4s linear infinite}
+  @keyframes rise{
+    0%{transform:translateY(0) scale(.6);opacity:0}
+    15%{opacity:1}
+    100%{transform:translateY(-38vmin) translateX(4vmin) scale(1);opacity:0}
+  }
+  .card{
+    position:relative;z-index:2;text-align:center;padding:40px 44px;
+    background:rgba(26,12,7,.5);border:1px solid rgba(249,115,22,.3);
+    border-radius:24px;backdrop-filter:blur(14px);
+    box-shadow:0 30px 80px rgba(0,0,0,.55);
+    max-width:92vw;
+  }
+  h1{
+    font-size:clamp(28px,5vw,44px);letter-spacing:6px;font-weight:800;
+    background:linear-gradient(110deg,#fff7ed,#fdba74 40%,#f97316 75%,#dc2626);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  p{margin-top:10px;color:var(--muted);font-size:14px;letter-spacing:2px}
+  .bar{
+    margin:22px auto 0;width:min(280px,70vw);height:4px;border-radius:2px;
+    background:rgba(249,115,22,.15);overflow:hidden;
+  }
+  .bar i{
+    display:block;height:100%;width:40%;border-radius:2px;
+    background:linear-gradient(90deg,#fbbf24,#f97316,#dc2626);
+    animation:slide 1s ease-in-out infinite;
+  }
+  @keyframes slide{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+  a{
+    display:inline-block;margin-top:22px;padding:10px 20px;border-radius:999px;
+    color:#1a0a05;font-size:13px;font-weight:600;text-decoration:none;
+    background:linear-gradient(100deg,#fbbf24,#f97316 60%,#dc2626);
+  }
+  a:hover{filter:brightness(1.08)}
+</style>
+</head>
+<body>
+<div class="scene">
+  <div class="volcano"></div>
+  <div class="glow"></div>
+  <span class="ember"></span><span class="ember"></span><span class="ember"></span>
+  <span class="ember"></span><span class="ember"></span>
+</div>
+
+<main class="card">
+  <h1>风林火山</h1>
+  <p>正在前往 · 学习成长记录</p>
+  <div class="bar"><i></i></div>
+  <a href="https://wmwwzs.github.io/learning-journey/">没跳转？点这里 →</a>
+</main>
+
+<script>
+  // meta refresh 之外再兜一层，确保一定能跳
+  setTimeout(function () {
+    location.replace('https://wmwwzs.github.io/learning-journey/');
+  }, 900);
+</script>
+</body>
+</html>
